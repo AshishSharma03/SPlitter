@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Box, Container, Typography} from "@mui/material"
+import MainBox from './component/MainBox'
+
+const AppCss =
+{      display:"flex",
+       flexDirection:"column",
+       justifyContent:"center",
+       alignItems:"center",
+       height:"90vh",
+}
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+     
+      <Container maxWidth="xl"
+       sx={AppCss}>
+      <Box sx={{padding:"50px",textAlign:"center"}}>
+      <Typography sx={{fontSize:"30px",letterSpacing:'10px',fontWeight:"700",color:"#426768"}}>SPLI</Typography>
+      <Typography sx={{fontSize:"30px",letterSpacing:'10px',fontWeight:"700",color:"#426768"}}>TTER</Typography>
+      </Box>
+      <MainBox/>
+      </Container>
+    </>
+  )
 }
 
-export default App;
+export default App
